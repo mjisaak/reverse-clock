@@ -2,14 +2,158 @@
 <html>
 
 <head>
-    <title>Page Title</title>
+    <title>Reverse clock</title>
 
-    <script src="index.js"></script>
+    <link href="./all.css" rel="stylesheet">
+    <!--load all styles -->
+
+    <style>
+        .main {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-size: 16px;
+            font-size: 3vw;
+            color: #EF8354;
+
+
+            text-align: center;
+        }
+
+        .options {
+            display: grid;
+
+
+        }
+
+        .left-half {
+
+            grid-column: 1;
+            margin: 10px;
+        }
+
+        .right-half {
+
+            grid-column: 2;
+            margin: 10px;
+        }
+
+        .main span {
+            color: #BFC0C0;
+            font-size: 1.5em;
+        }
+
+        .center2 {
+
+            font-size: 16px;
+            font-size: 2vw;
+            color: #EF8354;
+        }
+
+        a {
+            font-size: 16px;
+            font-size: 2vw;
+            text-decoration: none;
+            color: #BFC0C0;
+        }
+
+        a:hover {
+            color: #EF8354;
+
+        }
+
+        dialog {
+
+            color: #2D3142;
+            border: 2px solid black;
+
+            font-size: 16px;
+            font-size: 1vw;
+        }
+
+        body {
+            background-color: #2D3142;
+        }
+    </style>
+
 </head>
 
 <body>
-    asdf
-    <p id="demo"></p>
+
+
+
+    <main class="main">
+
+
+        <span id="rc_years"></span>y
+        <span id="rc_days"></span>d
+        <span id="rc_hours"></span>h
+        <span id="rc_minutes"></span>m
+        <span id="rc_seconds"></span>s
+
+        <div class="center2">
+            <a id="show-dialog" href="#">configure
+                <i class="fas fa-cog"></i>
+            </a>
+        </div>
+
+    </main>
+
+
+
+
+
+    <aside class="aside">
+        <dialog id="dialog">
+
+            <section class="options">
+                <div class="left-half">
+                    Birthday:
+                </div>
+                <div class="right-half">
+                    <input id='rc_date' type='date'></input>
+                </div>
+
+                <div class="left-half">
+                    Gender:
+                </div>
+                <div class="right-half">
+
+
+                    <form action="">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <input type="radio" name="gender" value="other"> Other
+                    </form>
+
+
+                </div>
+
+                <button id='saveSettings' class="right-half">Save</button>
+
+                </secion>
+
+
+
+
+                <!-- link to non-persistent background script -->
+
+
+
+        </dialog>
+    </aside>
+
+
+
+    <script src="index.js"></script>
+
 </body>
 
 </html>
