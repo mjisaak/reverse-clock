@@ -2,16 +2,16 @@
 
 
 
-countDownDate = new Date()
+countDownDate = new Date('1985-07-11')
 
 chrome.storage.sync.get(['key'], function (result) {
     console.log('Value currently is ' + result.key);
     document.getElementById('rc_date').value = result.key
 
     // Set the date we're counting down to
-    countDownDate = new Date(result.key)
+    // countDownDate = new Date(result.key)
     // M: 78,9 F: 83,6
-    countDownDate.setFullYear(countDownDate.getFullYear() + 80)
+    countDownDate.setFullYear(countDownDate.getFullYear() + 79)
     console.log("this is it", countDownDate)
 
     countDownDate = countDownDate.getTime();
